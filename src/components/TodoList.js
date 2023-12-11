@@ -21,7 +21,7 @@ const TodoList = () => {
   // Fetch todos from an API
   const fetchTodos = async () => {
     try {
-      const response = await fetch('https://jsonplaceholder.typicode.com/todos');
+      const response = await fetch('https://jsonplaceholder.typicode.com/todos?_limit=4');
       const todos = await response.json();
       setTasks(todos);
       setIsLoading(false);
@@ -221,7 +221,21 @@ const TodoList = () => {
           ))}
         </ul>
 
-        
+        <div className="filters">
+          <div className="dropdown">
+            <button className="dropbtn">Filter</button>
+            <div className="dropdown-content">
+              <p id="all" onClick={() => handleFilterChange('all')}>
+                All
+              </p>
+              <p id="rem" onClick={() => handleFilterChange('uncompleted')}>
+                Uncompleted
+              </p>
+              <p id="com" onClick={() => handleFilterChange('completed')}>
+                Completed
+              </p>
+            </div>
+          </div>
 
           <div className="completed-task">
             <p>
@@ -237,7 +251,7 @@ const TodoList = () => {
           </div>
         </div>
       </div>
-    
+    </div>
   );
 };
 
