@@ -206,11 +206,11 @@ const TodoList = () => {
               <div>
                 <img
                   src="https://cdn-icons-png.flaticon.com/128/1159/1159633.png"
-                  className="edit"
+                  className="edit" alt="icon"
                   data-id={task.id}
                   onClick={() => handleEditTask(task.id)}
                 />
-                <img
+                <img alt="icon"
                   src="https://cdn-icons-png.flaticon.com/128/3096/3096673.png"
                   className="delete"
                   data-id={task.id}
