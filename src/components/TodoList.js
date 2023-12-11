@@ -133,10 +133,7 @@ const TodoList = () => {
     setTasks((prevTasks) => prevTasks.filter((task) => !task.completed));
   };
 
-  // Handle filter change
-  const handleFilterChange = (filterType) => {
-    setFilter(filterType);
-  };
+
 
   // Filter tasks based on the selected filter
   const filteredTasks = tasks.filter((task) => {
