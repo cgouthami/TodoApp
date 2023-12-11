@@ -15,6 +15,7 @@ const TodoList = () => {
   // Fetch initial data
   useEffect(() => {
     fetchTodos();
+     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   // Fetch todos from an API
