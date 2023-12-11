@@ -8,7 +8,6 @@ const TodoList = () => {
   // State variables
   const [tasks, setTasks] = useState([]); // Holds the list of tasks
   const [inputValue, setInputValue] = useState(''); // Holds the value of the input field
-  const [filter, setFilter] = useState('all'); // Holds the current filter type
   const [isLoading, setIsLoading] = useState(true); // Indicates whether the data is being loaded
   const [editTaskId, setEditTaskId] = useState(null); // Holds the ID of the task being edited
 
