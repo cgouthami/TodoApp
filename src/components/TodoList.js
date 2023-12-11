@@ -37,9 +37,15 @@ const TodoList = () => {
   };
 
   // Add a new task
-  const handleAddTask = async () => {
-    if (inputValue.trim() === '') {
+  const handleAddTask = async (event) => {
+    event.preventDefault();
+  
+      if(inputValue.trim().length === 0){
+      
+      toast.error('Error adding task');
+      console.log("empty")
       return;
+      
     }
 
     const newTask = {
